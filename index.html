@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sorting Algorithm Visualization</h1>
+      <div class="optionSelection">
+        <div class="select">
+          <select name="algo" id="algo">
+            <option value="QuickSort">Quick Sort</option>
+            <option value="MergeSort">Merge Sort</option>
+            <option value="BubbleSort">Bubble Sort</option>
+            <option value="SelectionSort">Selection Sort</option>
+            <option value="HeapSort">Heap Sort</option>
+            <option value="InsertionSort">Insertion Sort</option>
+          </select>
+        </div>
+        <div class="buttonDiv">
+          <button class="startBtn btn">Visualize QuickSort</button>
+        </div>
+
+        <div class="buttonDiv">
+          <button class="resetBtn btn">Reset Graph</button>
+        </div>
+
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="10"
+            class="slider"
+            id="myRange"
+          />
+          <p class="sliderValue"></p>
+        </div>
+      </div>
+
+      <div class="complexity">
+        <table>
+          <tr>
+            <td>Worst Complexity</td>
+            <td id="worstValue">n<sup>2</sup></td>
+          </tr>
+          <tr>
+            <td>Average Complexity</td>
+            <td id="averageValue">n * log(n)</td>
+          </tr>
+          <tr>
+            <td>Best Complexity</td>
+            <td id="bestValue">n * log(n)</td>
+          </tr>
+          <tr>
+            <td>Space Complexity</td>
+            <td id="spaceValue">1</td>
+          </tr>
+          <tr>
+            <td>Stable</td>
+            <td id="stableValue">No</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="sorting.js"></script>
+    <script src="algorithms/quickSort.js"></script>
+    <script src="algorithms/mergeSort.js"></script>
+    <script src="algorithms/bubbleSort.js"></script>
+    <script src="algorithms/selectionSort.js"></script>
+    <script src="algorithms/heapSort.js"></script>
+    <script src="algorithms/insertionSort.js"></script>
+  </body>
+</html>
